@@ -126,12 +126,13 @@ String.prototype.grammarPolice = function () {
   const newStr = string.toLowerCase()
   let split = newStr.split("")
   for(let i = 0; i < newStr.length; i++) {
+    split.splice(0,1,split[0].toUpperCase())
     if (split[i] === " "){
       split.splice(i+1,1,split[i+1].toUpperCase())
       console.log(split.join(""))
     }
   }
-  // return split.join("")
+  return split.join("")
 }
 
 
